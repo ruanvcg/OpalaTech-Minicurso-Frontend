@@ -1,4 +1,4 @@
-# Material do Minicurso Desenvolvimento Frontend
+# Material do Minicurso
 
 Slides:
 
