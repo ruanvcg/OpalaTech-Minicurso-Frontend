@@ -1,3 +1,8 @@
+
+/**
+  =============================================== ESTILOS GERAIS =======================================
+*/
+
 *{
   margin: 0;
   padding: 0;
@@ -21,12 +26,19 @@ body{
   font-family: 'VT323', monospace;
   color: #f3f3f3;
   font-size: 18px;
+  
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   padding: 30px;
 }
+
+
+
+/**
+  =============================================== CARD CENTRAL ================================================
+*/
 
 .cartao{
   background-color: #070d12;
@@ -64,6 +76,11 @@ body{
   margin-top: 15px;
 }
 
+
+/**
+  ====================================================== MENU / ABAS =========================================
+*/
+
 .cartao .abas{
   display: flex;
 }
@@ -92,6 +109,11 @@ body{
 .cartao .abas .aba:hover{
   background-color: #414141;
 }
+
+
+/**
+  ============================================== CONTEÚDO DO MENU / ABA ===================================
+*/
 
 .informacoes-abas .informacao{
   min-height: 260px;

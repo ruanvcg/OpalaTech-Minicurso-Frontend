@@ -1,44 +1,16 @@
-/*
-    Passo 1 - Pegar os elementos que representam as abas no HTML
-    Passo 2 - Identificar o clique no elemento da aba
-    Passo 3 - Quando usuário clicar, desmarcar a aba selecionada
-    Passo 4 - Marcar a aba selecionada
-    Passo 5 - Esconder o conteúdo anterior
-    Passo 6 - Mostrar o conteúdo da aba selecionada
-
-*/
-
-const abas = document.querySelectorAll(".aba");
-console.log(abas);
+const abas = document.querySelectorAll(".aba"); // Seleciona todos os elementos que representam as abas no HTML
 
 abas.forEach((aba) => {
-  aba.addEventListener("click", function () {
-    
-    if (aba.classList.contains("selecionada")) {
-      return;
-    }
+  aba.addEventListener("click", function () { // Adiciona um evento de clique a cada aba
+    const abaSelecionada = document.querySelector(".aba.selecionada"); // Seleciona a aba atualmente selecionada (se houver)
 
-    selecionarAba(aba)
-    mostrarInformacoesDaAba(aba)
+    abaSelecionada?.classList.remove("selecionada"); // Remove a classe "selecionada" da aba anteriormente selecionada (se existir)
+    aba.classList.add("selecionada"); // Adiciona a classe "selecionada" à aba atual
+
+    document.querySelectorAll(".informacao.selecionado")
+      .forEach((info) => info.classList.remove("selecionado")); // Remove a classe "selecionado" de todas as informações anteriores selecionadas
+
+    document.getElementById(`informacao-${aba.id}`)
+      .classList.add("selecionado"); // Adiciona a classe "selecionado" à informação correspondente à aba atual
   });
 });
-
-function selecionarAba(aba){
-  const abaSelecionada = document.querySelector(".aba.selecionada");
-    abaSelecionada.classList.remove("selecionada");
-    aba.classList.add("selecionada");
-}
-
-  function mostrarInformacoesDaAba(aba){
-      const informacaoSelecionada = document.querySelector(
-        ".informacao.selecionado"
-      );
-      informacaoSelecionada.classList.remove("selecionado");
-
-      const idDoElementoDeInformacoesDaAba = `informacao-${aba.id}`;
-
-      const informacaoASerMostrada = document.getElementById(
-        idDoElementoDeInformacoesDaAba
-      );
-      informacaoASerMostrada.classList.add("selecionado");
-  }
