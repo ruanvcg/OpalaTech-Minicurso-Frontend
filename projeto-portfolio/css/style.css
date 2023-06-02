@@ -110,11 +110,6 @@ body{
   background-color: #414141;
 }
 
-
-/**
-  ============================================== CONTEÚDO DO MENU / ABA ===================================
-*/
-
 .informacoes-abas .informacao{
   min-height: 260px;
   padding: 15px;
@@ -124,6 +119,10 @@ body{
 .informacoes-abas .informacao.selecionado{
   display: block;
 }
+
+/**
+  ============================================== CONTEÚDO SOBRE ===================================
+*/
 
 .informacoes-abas .sub-titulo{
   font-size: 22px;
@@ -145,6 +144,12 @@ body{
 .informacoes-abas .descricao p{
   text-align: justify;
 }
+
+
+
+/**
+  ================================================ CONTEÚDO REDES SOCIAIS ===============================
+*/
 
 .redes-sociais{
   display: flex;
@@ -180,6 +185,11 @@ body{
 .redes-sociais li a:hover{
   opacity: 0.8;
 }
+
+
+/**
+  ================================================ CONTEÚDO PROJETOS ===============================
+*/
 
 .informacao .meus-projetos{
   text-align: center;
