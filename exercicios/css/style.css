@@ -16,3 +16,21 @@ h2{
 p{
     text-align: justify;
 }
+
+/**
+    Exemplos utilizando classes e ids
+*/
+
+.destaque{
+    color: red;
+    font-weight: bold;
+}
+
+.sublinhado{
+    text-decoration: underline;
+}
+
+#capitulo-1{
+    color: blue;
+    font-size: xx-large;
+}
